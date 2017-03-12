@@ -72,6 +72,7 @@ public class Game {
 
     public void update() {
         camera.update(0,0,map.getNbTileWidth()*map.getTileWidth(), map.getNbTileHeight()*map.getTileHeight());
+        player.update();
     }
 
     public void render(double t) {

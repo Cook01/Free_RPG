@@ -7,10 +7,11 @@ import javafx.scene.input.KeyEvent;
 import java.util.ArrayList;
 
 public class KeyHandler implements EventHandler<KeyEvent> {
-    ArrayList<KeyCode> keyPressed;
-    KeyCode lastDirectionReleased;
+    private ArrayList<KeyCode> keyPressed;
+    private KeyCode lastDirectionReleased;
 
-    ArrayList<EventHandler<KeyChangedEvent>> handlers;
+    private ArrayList<EventHandler<KeyChangedEvent>> handlers;
+
     public KeyHandler(){
         keyPressed = new ArrayList<KeyCode>();
         handlers = new ArrayList<EventHandler<KeyChangedEvent>>();
@@ -30,6 +31,8 @@ public class KeyHandler implements EventHandler<KeyEvent> {
         KeyChangedEvent keyChangedEvent = new KeyChangedEvent(keyPressed, lastDirectionReleased);
 
         fire(keyChangedEvent);
+
+        System.err.println(keyPressed);
     }
 
     private void fire(KeyChangedEvent keyChangedEvent) {

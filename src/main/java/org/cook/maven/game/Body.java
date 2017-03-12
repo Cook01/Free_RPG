@@ -45,4 +45,8 @@ public class Body {
     public Soul getSoul() {
         return soul;
     }
+
+    public void update(){
+        this.soul.getWalkOrder();
+    }
 }

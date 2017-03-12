@@ -10,8 +10,7 @@ public class KeyChangedEvent extends Event {
     private ArrayList<KeyCode> keyPressed;
     private KeyCode lastKeyReleased;
 
-    public static final EventType<KeyChangedEvent> KEY_CHANGED =
-            new EventType<KeyChangedEvent>(Event.ANY, "KEY_CHANGED");
+    private static final EventType<KeyChangedEvent> KEY_CHANGED = new EventType<KeyChangedEvent>(Event.ANY, "KEY_CHANGED");
 
     public KeyChangedEvent(ArrayList<KeyCode> keyPressed, KeyCode lastKeyReleased) {
         super(KEY_CHANGED);
